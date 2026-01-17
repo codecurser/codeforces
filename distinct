@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int y = sc.nextInt();
+
+        while (true) {
+            y++;
+            if (hasDistinctDigits(y)) {
+                System.out.println(y);
+                break;
+            }
+        }
+    }
+
+    static boolean hasDistinctDigits(int year) {
+        String s = String.valueOf(year);
+        Set<Character> set = new HashSet<>();
+
+        for (char c : s.toCharArray()) {
+            set.add(c);
+        }
+
+        return set.size() == s.length();
+    }
+}
