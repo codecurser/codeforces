@@ -16,7 +16,7 @@ public class Main {
                  
                     arr[i] = 'G';
                     arr[i + 1] = 'B';
-                    i++;
+                    i=i+1;
                 }
             }
         }
